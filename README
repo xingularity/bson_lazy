@@ -1,0 +1,7 @@
+# BSON_LAZY
+
+This is my own python3 version of bson_lazy.
+        
+This version also adds a jump function. This functions jumps the file handler with various number of json objects.
+
+
