@@ -49,3 +49,4 @@ def jump(fh, number):
         
         obj_size = struct.unpack("<i", obj_size)[0]
         fh.read(obj_size - S_INT32)
+        index = index + 1
