@@ -43,10 +43,13 @@ def load(fh, as_class=dict,
 def jump(fh, number):
     index = 0
     while index < number:
+        index = index + 1
         obj_size = fh.read(S_INT32)
         if len(obj_size) == 0:
-            return
-        
+            print("\""fh.name + "\" has reached its end, stop jumping." + " index = " + str(index))
+            return False
+
         obj_size = struct.unpack("<i", obj_size)[0]
         fh.read(obj_size - S_INT32)
-        index = index + 1
+    return True
+
